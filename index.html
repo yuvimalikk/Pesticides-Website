@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Database</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body onload="pageLoadAnimation()">
+
+    <header id="header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1>PESTICIDE DATABASE</h1>
+            </div>
+            <div class="header-right">
+                <input type="text" id="search" placeholder="Search" onkeyup="filterTable()">
+                <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <table id="pesticideTable">
+            <thead>
+                <tr>
+                    <th>Pesticides</th>
+                    <th>Common Name</th>
+                    <th>Target Crop(s)</th>
+                    <th>Benefits</th>
+                    <th>Environmental Impact</th>
+                    <th>Impact on Living Organisms</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Pesticide Data -->
+                <tr>
+                    <td>Insecticide</td>
+                    <td>Chlorpyrifos</td>
+                    <td>Corn, Cotton</td>
+                    <td>Controls pests like beetles and caterpillars</td>
+                    <td>Contaminates soil and water</td>
+                    <td>Toxic to birds and aquatic life</td>
+                </tr>
+                <tr>
+                    <td>Herbicide</td>
+                    <td>Glyphosate</td>
+                    <td>Soybean, Corn</td>
+                    <td>Effectively kills weeds</td>
+                    <td>Causes soil degradation</td>
+                    <td>Potential carcinogen for humans</td>
+                </tr>
+                <tr>
+                    <td>Fungicide</td>
+                    <td>Captan</td>
+                    <td>Apples, Strawberries</td>
+                    <td>Prevents fungal growth</td>
+                    <td>Leaches into groundwater</td>
+                    <td>Harmful to fish and amphibians</td>
+                </tr>
+                <tr>
+                    <td>Insecticide</td>
+                    <td>Imidacloprid</td>
+                    <td>Rice, Vegetables</td>
+                    <td>Controls aphids and beetles</td>
+                    <td>Pollution risk to water bodies</td>
+                    <td>Dangerous to bees and birds</td>
+                </tr>
+                <tr>
+                    <td>Herbicide</td>
+                    <td>2,4-D</td>
+                    <td>Wheat, Rice</td>
+                    <td>Removes broadleaf weeds</td>
+                    <td>Runoff causes water pollution</td>
+                    <td>Skin irritant for humans</td>
+                </tr>
+                <tr>
+                    <td>Fungicide</td>
+                    <td>Mancozeb</td>
+                    <td>Tomatoes, Potatoes</td>
+                    <td>Prevents fungal diseases</td>
+                    <td>Bioaccumulation in soil</td>
+                    <td>Toxic to fish and amphibians</td>
+                </tr>
+                <tr>
+                    <td>Insecticide</td>
+                    <td>Diazinon</td>
+                    <td>Fruit trees, Vegetables</td>
+                    <td>Controls insects like aphids</td>
+                    <td>Contaminates groundwater</td>
+                    <td>Harmful to birds and aquatic animals</td>
+                </tr>
+                <tr>
+                    <td>Herbicide</td>
+                    <td>Paraquat</td>
+                    <td>Sugarcane, Vegetables</td>
+                    <td>Effective weed killer</td>
+                    <td>Highly toxic to soil</td>
+                    <td>Causes respiratory issues in humans</td>
+                </tr>
+                <tr>
+                    <td>Insecticide</td>
+                    <td>Acephate</td>
+                    <td>Ornamental Plants</td>
+                    <td>Controls mites and aphids</td>
+                    <td>Pollutes groundwater</td>
+                    <td>Harmful to mammals</td>
+                </tr>
+                <tr>
+                    <td>Fungicide</td>
+                    <td>Copper Oxychloride</td>
+                    <td>Vegetables, Fruits</td>
+                    <td>Prevents fungal growth</td>
+                    <td>Accumulates in soil</td>
+                    <td>Toxic to fish and aquatic life</td>
+                </tr>
+                <tr>
+                    <td>Insecticide</td>
+                    <td>Malathion</td>
+                    <td>Fruits, Vegetables</td>
+                    <td>Controls mosquitoes</td>
+                    <td>Contaminates soil</td>
+                    <td>Toxic to fish</td>
+                </tr>
+                <tr>
+                    <td>Herbicide</td>
+                    <td>Atrazine</td>
+                    <td>Maize, Sorghum</td>
+                    <td>Controls annual grasses</td>
+                    <td>Leaches into groundwater</td>
+                    <td>Disrupts amphibian hormone systems</td>
+                </tr>
+                <tr>
+                    <td>Fungicide</td>
+                    <td>Thiram</td>
+                    <td>Ornamental Plants</td>
+                    <td>Prevents mildew and rot</td>
+                    <td>Long-lasting soil presence</td>
+                    <td>Skin irritant for humans</td>
+                </tr>
+                <tr>
+                    <td>Insecticide</td>
+                    <td>Carbaryl</td>
+                    <td>Vegetables, Fruit Trees</td>
+                    <td>Effective pest control</td>
+                    <td>Leaches into soil</td>
+                    <td>Highly toxic to bees</td>
+                </tr>
+                <tr>
+                    <td>Herbicide</td>
+                    <td>Dicamba</td>
+                    <td>Grains, Pasture</td>
+                    <td>Controls broadleaf weeds</td>
+                    <td>Can drift to non-target crops</td>
+                    <td>Potential carcinogen</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer id="footer">
+        <p>CHE 110 | Designed for easy pesticide information access | © 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
