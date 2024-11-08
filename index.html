@@ -3,19 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Database</title>
-    <link rel="shortcut icon" type="x-icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body onload="pageLoadAnimation()">
+<body onload="showLanguageSection('en'); pageLoadAnimation()">
 
     <header id="header">
         <div class="header-content">
             <div class="header-left">
-                <h1>PESTICIDE DATABASE</h1>
+                <h1 id="page-title">PESTICIDE DATABASE</h1>
             </div>
             <div class="header-right">
                 <input type="text" id="search" placeholder="Search" onkeyup="filterTable()">
@@ -25,145 +25,877 @@
     </header>
 
     <main id="main-content" class="container">
-        <table id="pesticideTable">
-            <thead>
-                <tr>
-                    <th>Pesticides</th>
-                    <th>Common Name</th>
-                    <th>Target Crop(s)</th>
-                    <th>Benefits</th>
-                    <th>Environmental Impact</th>
-                    <th>Impact on Living Organisms</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Pesticide Data -->
-                <tr>
-                    <td>Insecticide</td>
-                    <td>Chlorpyrifos</td>
-                    <td>Corn, Cotton</td>
-                    <td>Controls pests like beetles and caterpillars</td>
-                    <td>Contaminates soil and water</td>
-                    <td>Toxic to birds and aquatic life</td>
-                </tr>
-                <tr>
-                    <td>Herbicide</td>
-                    <td>Glyphosate</td>
-                    <td>Soybean, Corn</td>
-                    <td>Effectively kills weeds</td>
-                    <td>Causes soil degradation</td>
-                    <td>Potential carcinogen for humans</td>
-                </tr>
-                <tr>
-                    <td>Fungicide</td>
-                    <td>Captan</td>
-                    <td>Apples, Strawberries</td>
-                    <td>Prevents fungal growth</td>
-                    <td>Leaches into groundwater</td>
-                    <td>Harmful to fish and amphibians</td>
-                </tr>
-                <tr>
-                    <td>Insecticide</td>
-                    <td>Imidacloprid</td>
-                    <td>Rice, Vegetables</td>
-                    <td>Controls aphids and beetles</td>
-                    <td>Pollution risk to water bodies</td>
-                    <td>Dangerous to bees and birds</td>
-                </tr>
-                <tr>
-                    <td>Herbicide</td>
-                    <td>2,4-D</td>
-                    <td>Wheat, Rice</td>
-                    <td>Removes broadleaf weeds</td>
-                    <td>Runoff causes water pollution</td>
-                    <td>Skin irritant for humans</td>
-                </tr>
-                <tr>
-                    <td>Fungicide</td>
-                    <td>Mancozeb</td>
-                    <td>Tomatoes, Potatoes</td>
-                    <td>Prevents fungal diseases</td>
-                    <td>Bioaccumulation in soil</td>
-                    <td>Toxic to fish and amphibians</td>
-                </tr>
-                <tr>
-                    <td>Insecticide</td>
-                    <td>Diazinon</td>
-                    <td>Fruit trees, Vegetables</td>
-                    <td>Controls insects like aphids</td>
-                    <td>Contaminates groundwater</td>
-                    <td>Harmful to birds and aquatic animals</td>
-                </tr>
-                <tr>
-                    <td>Herbicide</td>
-                    <td>Paraquat</td>
-                    <td>Sugarcane, Vegetables</td>
-                    <td>Effective weed killer</td>
-                    <td>Highly toxic to soil</td>
-                    <td>Causes respiratory issues in humans</td>
-                </tr>
-                <tr>
-                    <td>Insecticide</td>
-                    <td>Acephate</td>
-                    <td>Ornamental Plants</td>
-                    <td>Controls mites and aphids</td>
-                    <td>Pollutes groundwater</td>
-                    <td>Harmful to mammals</td>
-                </tr>
-                <tr>
-                    <td>Fungicide</td>
-                    <td>Copper Oxychloride</td>
-                    <td>Vegetables, Fruits</td>
-                    <td>Prevents fungal growth</td>
-                    <td>Accumulates in soil</td>
-                    <td>Toxic to fish and aquatic life</td>
-                </tr>
-                <tr>
-                    <td>Insecticide</td>
-                    <td>Malathion</td>
-                    <td>Fruits, Vegetables</td>
-                    <td>Controls mosquitoes</td>
-                    <td>Contaminates soil</td>
-                    <td>Toxic to fish</td>
-                </tr>
-                <tr>
-                    <td>Herbicide</td>
-                    <td>Atrazine</td>
-                    <td>Maize, Sorghum</td>
-                    <td>Controls annual grasses</td>
-                    <td>Leaches into groundwater</td>
-                    <td>Disrupts amphibian hormone systems</td>
-                </tr>
-                <tr>
-                    <td>Fungicide</td>
-                    <td>Thiram</td>
-                    <td>Ornamental Plants</td>
-                    <td>Prevents mildew and rot</td>
-                    <td>Long-lasting soil presence</td>
-                    <td>Skin irritant for humans</td>
-                </tr>
-                <tr>
-                    <td>Insecticide</td>
-                    <td>Carbaryl</td>
-                    <td>Vegetables, Fruit Trees</td>
-                    <td>Effective pest control</td>
-                    <td>Leaches into soil</td>
-                    <td>Highly toxic to bees</td>
-                </tr>
-                <tr>
-                    <td>Herbicide</td>
-                    <td>Dicamba</td>
-                    <td>Grains, Pasture</td>
-                    <td>Controls broadleaf weeds</td>
-                    <td>Can drift to non-target crops</td>
-                    <td>Potential carcinogen</td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- English Section -->
+        <div id="section-en" class="language-section active">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pesticides</th>
+                        <th>Common Name</th>
+                        <th>Target Crop(s)</th>
+                        <th>Benefits</th>
+                        <th>Environmental Impact</th>
+                        <th>Impact on Living Organisms</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pesticide Data -->
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Chlorpyrifos</td>
+                        <td>Corn, Cotton</td>
+                        <td>Controls pests like beetles and caterpillars</td>
+                        <td>Contaminates soil and water</td>
+                        <td>Toxic to birds and aquatic life</td>
+                    </tr>
+                    <tr>
+                        <td>Herbicide</td>
+                        <td>Glyphosate</td>
+                        <td>Soybean, Corn</td>
+                        <td>Effectively kills weeds</td>
+                        <td>Causes soil degradation</td>
+                        <td>Potential carcinogen for humans</td>
+                    </tr>
+                    <tr>
+                        <td>Fungicide</td>
+                        <td>Captan</td>
+                        <td>Apples, Strawberries</td>
+                        <td>Prevents fungal growth</td>
+                        <td>Leaches into groundwater</td>
+                        <td>Harmful to fish and amphibians</td>
+                    </tr>
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Imidacloprid</td>
+                        <td>Rice, Vegetables</td>
+                        <td>Controls aphids and beetles</td>
+                        <td>Pollution risk to water bodies</td>
+                        <td>Dangerous to bees and birds</td>
+                    </tr>
+                    <tr>
+                        <td>Herbicide</td>
+                        <td>2,4-D</td>
+                        <td>Wheat, Rice</td>
+                        <td>Removes broadleaf weeds</td>
+                        <td>Runoff causes water pollution</td>
+                        <td>Skin irritant for humans</td>
+                    </tr>
+                    <tr>
+                        <td>Fungicide</td>
+                        <td>Mancozeb</td>
+                        <td>Tomatoes, Potatoes</td>
+                        <td>Prevents fungal diseases</td>
+                        <td>Bioaccumulation in soil</td>
+                        <td>Toxic to fish and amphibians</td>
+                    </tr>
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Diazinon</td>
+                        <td>Fruit trees, Vegetables</td>
+                        <td>Controls insects like aphids</td>
+                        <td>Contaminates groundwater</td>
+                        <td>Harmful to birds and aquatic animals</td>
+                    </tr>
+                    <tr>
+                        <td>Herbicide</td>
+                        <td>Paraquat</td>
+                        <td>Sugarcane, Vegetables</td>
+                        <td>Effective weed killer</td>
+                        <td>Highly toxic to soil</td>
+                        <td>Causes respiratory issues in humans</td>
+                    </tr>
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Acephate</td>
+                        <td>Ornamental Plants</td>
+                        <td>Controls mites and aphids</td>
+                        <td>Pollutes groundwater</td>
+                        <td>Harmful to mammals</td>
+                    </tr>
+                    <tr>
+                        <td>Fungicide</td>
+                        <td>Copper Oxychloride</td>
+                        <td>Vegetables, Fruits</td>
+                        <td>Prevents fungal growth</td>
+                        <td>Accumulates in soil</td>
+                        <td>Toxic to fish and aquatic life</td>
+                    </tr>
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Malathion</td>
+                        <td>Fruits, Vegetables</td>
+                        <td>Controls mosquitoes</td>
+                        <td>Contaminates soil</td>
+                        <td>Toxic to fish</td>
+                    </tr>
+                    <tr>
+                        <td>Herbicide</td>
+                        <td>Atrazine</td>
+                        <td>Maize, Sorghum</td>
+                        <td>Controls annual grasses</td>
+                        <td>Leaches into groundwater</td>
+                        <td>Disrupts amphibian hormone systems</td>
+                    </tr>
+                    <tr>
+                        <td>Fungicide</td>
+                        <td>Thiram</td>
+                        <td>Ornamental Plants</td>
+                        <td>Prevents mildew and rot</td>
+                        <td>Long-lasting soil presence</td>
+                        <td>Skin irritant for humans</td>
+                    </tr>
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Carbaryl</td>
+                        <td>Vegetables, Fruit Trees</td>
+                        <td>Effective pest control</td>
+                        <td>Leaches into soil</td>
+                        <td>Highly toxic to bees</td>
+                    </tr>
+                    <tr>
+                        <td>Herbicide</td>
+                        <td>Dicamba</td>
+                        <td>Grains, Pasture</td>
+                        <td>Controls broadleaf weeds</td>
+                        <td>Can drift to non-target crops</td>
+                        <td>Potential carcinogen</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Hindi Section -->
+        <div id="section-hi" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>कीटनाशक</th>
+                        <th>सामान्य नाम</th>
+                        <th>लक्ष्य फसल</th>
+                        <th>लाभ</th>
+                        <th>पर्यावरणीय प्रभाव</th>
+                        <th>जीवों पर प्रभाव</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pesticide Data in Hindi -->
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>क्लोरपाइरीफोस</td>
+                        <td>मक्का, कपास</td>
+                        <td>बीटल और कैटरपिलर जैसे कीटों को नियंत्रित करता है</td>
+                        <td>मिट्टी और पानी को प्रदूषित करता है</td>
+                        <td>पक्षियों और जलीय जीवों के लिए विषैला</td>
+                    </tr>
+                    <tr>
+                        <td>शाकनाशी</td>
+                        <td>ग्लाइफोसेट</td>
+                        <td>सोयाबीन, मक्का</td>
+                        <td>घास को प्रभावी ढंग से मारता है</td>
+                        <td>मिट्टी का अपघटन का कारण बनता है</td>
+                        <td>मानव के लिए संभावित कार्सिनोजेन</td>
+                    </tr>
+                    <tr>
+                        <td>फफूंदनाशी</td>
+                        <td>कैप्टन</td>
+                        <td>सेब, स्ट्रॉबेरी</td>
+                        <td>फफूंद के विकास को रोकता है</td>
+                        <td>भूमिगत जल में रिसाव</td>
+                        <td>मछली और उभयचरों के लिए हानिकारक</td>
+                    </tr>
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>इमिडाक्लोप्रिड</td>
+                        <td>धान, सब्जियां</td>
+                        <td>एफिड्स और बीटल को नियंत्रित करता है</td>
+                        <td>जल निकायों के लिए प्रदूषण का खतरा</td>
+                        <td>मधुमक्खियों और पक्षियों के लिए खतरनाक</td>
+                    </tr>
+                    <tr>
+                        <td>शाकनाशी</td>
+                        <td>2,4-डी</td>
+                        <td>गेहूं, धान</td>
+                        <td>चौड़ी पत्ती वाले घासों को हटाता है</td>
+                        <td>बहाव के कारण जल प्रदूषण</td>
+                        <td>मानव त्वचा के लिए जलनकारी</td>
+                    </tr>
+                    <tr>
+                        <td>फफूंदनाशी</td>
+                        <td>मैनकोज़ेब</td>
+                        <td>टमाटर, आलू</td>
+                        <td>फफूंद रोगों को रोकता है</td>
+                        <td>मिट्टी में जैव संचयन</td>
+                        <td>मछली और उभयचरों के लिए विषैला</td>
+                    </tr>
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>डायज़िनॉन</td>
+                        <td>फलों के पेड़, सब्जियां</td>
+                        <td>एफिड्स जैसे कीड़ों को नियंत्रित करता है</td>
+                        <td>भूमिगत जल को प्रदूषित करता है</td>
+                        <td>पक्षियों और जलीय जीवों के लिए हानिकारक</td>
+                    </tr>
+                    <tr>
+                        <td>शाकनाशी</td>
+                        <td>पैराक्वाट</td>
+                        <td>गन्ना, सब्जियां</td>
+                        <td>प्रभावी घास नाशक</td>
+                        <td>मिट्टी के लिए अत्यधिक विषैला</td>
+                        <td>मानव में श्वसन समस्याओं का कारण बनता है</td>
+                    </tr>
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>एसिफेट</td>
+                        <td>सजावटी पौधे</td>
+                        <td>माइट्स और एफिड्स को नियंत्रित करता है</td>
+                        <td>भूमिगत जल को प्रदूषित करता है</td>
+                        <td>स्तनधारियों के लिए हानिकारक</td>
+                    </tr>
+                    <tr>
+                        <td>फफूंदनाशी</td>
+                        <td>कॉपर ऑक्सीक्लोराइड</td>
+                        <td>सब्जियां, फल</td>
+                        <td>फफूंद के विकास को रोकता है</td>
+                        <td>मिट्टी में संचय</td>
+                        <td>मछली और जलीय जीवन के लिए विषैला</td>
+                    </tr>
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>मेलाथियॉन</td>
+                        <td>फल, सब्जियां</td>
+                        <td>मच्छरों को नियंत्रित करता है</td>
+                        <td>मिट्टी को प्रदूषित करता है</td>
+                        <td>मछलियों के लिए विषैला</td>
+                    </tr>
+                    <tr>
+                        <td>शाकनाशी</td>
+                        <td>एट्राज़ीन</td>
+                        <td>मक्का, ज्वार</td>
+                        <td>वार्षिक घास को नियंत्रित करता है</td>
+                        <td>भूमिगत जल में रिसाव</td>
+                        <td>उभयचरों के हार्मोन प्रणाली को प्रभावित करता है</td>
+                    </tr>
+                    <tr>
+                        <td>फफूंदनाशी</td>
+                        <td>थिरम</td>
+                        <td>सजावटी पौधे</td>
+                        <td>फफूंदी और सड़न को रोकता है</td>
+                        <td>मिट्टी में लंबे समय तक रहता है</td>
+                        <td>मानव त्वचा के लिए जलनकारी</td>
+                    </tr>
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>कार्बारिल</td>
+                        <td>सब्जियां, फल के पेड़</td>
+                        <td>प्रभावी कीट नियंत्रण</td>
+                        <td>मिट्टी में रिसाव</td>
+                        <td>मधुमक्खियों के लिए अत्यधिक विषैला</td>
+                    </tr>
+                    <tr>
+                        <td>शाकनाशी</td>
+                        <td>डाइकाम्बा</td>
+                        <td>अनाज, चरागाह</td>
+                        <td>चौड़ी पत्ती वाले घासों को नियंत्रित करता है</td>
+                        <td>अन्य फसलों पर बहाव का खतरा</td>
+                        <td>संभावित कार्सिनोजेन</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tamil Section -->
+        <div id="section-ta" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>பூச்சிக்கொல்லி</th>
+                        <th>பொது பெயர்</th>
+                        <th>இலக்கு பயிர்கள்</th>
+                        <th>முடிவு</th>
+                        <th>சுற்றுச்சூழல் விளைவு</th>
+                        <th>சசிக்கான விளைவு</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pesticide Data in Tamil -->
+                    <tr>
+                        <td>பூச்சிக்கொல்லி</td>
+                        <td>கிளோர்பிரிபோஸ்</td>
+                        <td>மக்கா, சோயா</td>
+                        <td>பீட்டில்கள் மற்றும் கேடர்பில்லரின் போக்கு கட்டுப்படுத்தல்</td>
+                        <td>மண் மற்றும் நீரை கெடுக்கிறது</td>
+                        <td>பறவைகள் மற்றும் நீர்வாழ் உயிரினங்களுக்கு விஷம்</td>
+                    </tr>
+                    <tr>
+                        <td>புல் நாசினி</td>
+                        <td>கிளைபோசேட்</td>
+                        <td>சோயா, மக்கா</td>
+                        <td>புல்களை செழுமையாக அழிக்கிறது</td>
+                        <td>மண்ணின் அழிவு ஏற்படுத்துகிறது</td>
+                        <td>மனிதர்களுக்கு கிராவிக் விளைவுகளுக்கு காரணமாக இருக்கலாம்</td>
+                    </tr>
+                    <tr>
+                        <td>பூஞ்சியை கட்டுப்படுத்தும் மருந்து</td>
+                        <td>காப்டன்</td>
+                        <td>ஆப்பிள்கள், ஸ்ட்ராபெர்ரி</td>
+                        <td>பூஞ்சியை வளர்ச்சியடையாமல் தடுக்கிறது</td>
+                        <td>கடலிலிருந்து நீரில் ஊறிவிடுகிறது</td>
+                        <td>மீன்கள் மற்றும் உபயோகப் பொருள்கள் உயிரினங்களுக்கு விஷம்</td>
+                    </tr>
+                    <tr>
+                        <td>பூச்சிக்கொல்லி</td>
+                        <td>இமிடாக்லோபிரிட்</td>
+                        <td>அரிசி, காய்கறிகள்</td>
+                        <td>ஃபிட்கள் மற்றும் பீட்டில்கள் கட்டுப்படுத்தல்</td>
+                        <td>நீரின் மீசலைப் பாதிக்கும் அபாயம்</td>
+                        <td>தினசரி பயன்பாட்டிற்கு நசுக்குப்பவர்களுக்கு போதுமானது</td>
+                    </tr>
+                    <tr>
+                        <td>புல் நாசினி</td>
+                        <td>2,4-டி</td>
+                        <td>கோதுமை, அரிசி</td>
+                        <td>பிராட்லீஃப் புல்களை அழிக்கிறது</td>
+                        <td>நீர் தொலைந்துவிடும்</td>
+                        <td>மனிதர்களுக்கு தோல் எரிச்சல் உண்டாக்கும்</td>
+                    </tr>
+                    <tr>
+                        <td>பூஞ்சியை கட்டுப்படுத்தும் மருந்து</td>
+                        <td>மான்கோசெப்</td>
+                        <td>தக்காளி, உருளைக்கிழங்கு</td>
+                        <td>பூஞ்சிக்கான நோய்களை தடுக்கும்</td>
+                        <td>மண்ணில் பலத்த சேதம் ஏற்படுத்துகிறது</td>
+                        <td>மீன்களுக்கும் உயிரினங்களுக்கும் தீங்கு</td>
+                    </tr>
+                    <tr>
+                        <td>பூச்சிக்கொல்லி</td>
+                        <td>டயசினோன்</td>
+                        <td>முத்துத் திரைகள், காய்கறிகள்</td>
+                        <td>ஃபிட்கள் போன்ற பூச்சிகளை கட்டுப்படுத்துதல்</td>
+                        <td>தண்ணீரின் உள்ளே கழிப்புகளை பரிமாறுகிறது</td>
+                        <td>பறவைகள் மற்றும் உயிரினங்களுக்கு தீங்கு</td>
+                    </tr>
+                    <tr>
+                        <td>புல் நாசினி</td>
+                        <td>பாராகுவாட்</td>
+                        <td>சக்கரை, காய்கறிகள்</td>
+                        <td>பூச்சிகளின் போக்கு கட்டுப்படுத்துதல்</td>
+                        <td>சூழலை அசிதலாக்குகிறது</td>
+                        <td>நசுக்குறைகளை உண்டாக்குகிறது</td>
+                    </tr>
+                    <tr>
+                        <td>பூச்சிக்கொல்லி</td>
+                        <td>ஏசிபேட்</td>
+                        <td>சஜாவட்டப் புலிகள்</td>
+                        <td>மீடியேற்றமான பூச்சிகளைக் கட்டுப்படுத்துகிறது</td>
+                        <td>பூமியில் சேதத்தை ஏற்படுத்துகிறது</td>
+                        <td>மammளங்களுக்குச் சீரற்ற வினையாளர் குறைபாடுகள்</td>
+                    </tr>
+                    <tr>
+                        <td>பூஞ்சிகளை கட்டுப்படுத்தும் மருந்து</td>
+                        <td>காப்பர் ஆக்சிகிளோரிட்</td>
+                        <td>காய்கறிகள், பழங்கள்</td>
+                        <td>பூஞ்சியின்போது வளர்ச்சியைத் தடுக்கும்</td>
+                        <td>மண்ணிலிருந்து நிலைத்திருப்பதாகிறது</td>
+                        <td>சூரிய ஜீரணங்களை நீக்குகிறது</td>
+                    </tr>
+                    <tr>
+                        <td>பூச்சிக்கொல்லி</td>
+                        <td>மலாதியான்</td>
+                        <td>பழங்கள், காய்கறிகள்</td>
+                        <td>பூச்சிகளின் பூச்சிகள்</td>
+                        <td>கடல் கீறி முறையாக தவிர்க்கும்</td>
+                        <td>கடல் உயிர்களை குறைக்கும்</td>
+                    </tr>
+                    <tr>
+                        <td>புல் நாசினி</td>
+                        <td>அட்ராசின்</td>
+                        <td>நான்கு பொருட்கள்</td>
+                        <td>நிலைத்த பந்தேன்னியச் செய்தல்</td>
+                        <td>வேறொரு பட்டியலின் மேற்பார்வை</td>
+                        <td>மக்கள் பாதிப்புத</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Telugu Section -->
+        <div id="section-te" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>పిస్టిసైడ్లు</th>
+                        <th>సాధారణ పేరు</th>
+                        <th>లక్ష్య పంట(లు)</th>
+                        <th>ప్రయోజనాలు</th>
+                        <th>పర్యావరణ ప్రభావం</th>
+                        <th>జీవజంతువులపై ప్రభావం</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pesticide Data in Telugu -->
+                    <tr>
+                        <td>పురుగుల నాశనం</td>
+                        <td>క్లొర్పిరిఫోస్</td>
+                        <td>భోరా, పత్తి</td>
+                        <td>గిరగిట్లు మరియు పురుగుల నియంత్రణ</td>
+                        <td>మట్టిని మరియు నీటిని కాలుష్యం చేస్తుంది</td>
+                        <td>పక్షులు మరియు జలజీవులకు విషం</td>
+                    </tr>
+                    <tr>
+                        <td>పచ్చిపూల నాశకం</td>
+                        <td>గ్లైఫోసేట్</td>
+                        <td>సోయా, మక్కా</td>
+                        <td>ప్రాముఖ్యంగా మొక్కలపై పెరిగే మొక్కలను మరణించేలా చేస్తుంది</td>
+                        <td>మట్టి యొక్క కాలుష్యాన్ని కలిగిస్తుంది</td>
+                        <td>మానవులకు క్యాన్సర్ కారణంగా ఉండే అవకాశం ఉంది</td>
+                    </tr>
+                    <tr>
+                        <td>పూచం కాపడం</td>
+                        <td>క్యాప్టాన్</td>
+                        <td>ఆపిల్స్, స్ట్రాబెర్రీస్</td>
+                        <td>పూచం పెరిగే నిషిద్ధం</td>
+                        <td>నీటిలో చేరి, నీటి కాలుష్యాన్ని కలిగిస్తుంది</td>
+                        <td>మీన్లు మరియు అంబిబియన్స్ కు హానికరం</td>
+                    </tr>
+                    <tr>
+                        <td>పురుగుల నాశకం</td>
+                        <td>ఇమిడాక్లోపిరిడ్</td>
+                        <td>అరువి, కూరగాయలు</td>
+                        <td>ఆఫిడ్స్ మరియు పురుగులను నియంత్రిస్తుంది</td>
+                        <td>నీటిలో కాలుష్యాన్ని కలిగిస్తుంది</td>
+                        <td>మంచి పక్షులు మరియు పక్షులకు ప్రమాదకరం</td>
+                    </tr>
+                    <tr>
+                        <td>పచ్చిపూల నాశకం</td>
+                        <td>2,4-డి</td>
+                        <td>గోధుమ, అరువు</td>
+                        <td>పరిసరంలో ఉన్న బైటపటా మొక్కలను తొలగిస్తుంది</td>
+                        <td>నీటి కాలుష్యానికి కారణం అవుతుంది</td>
+                        <td>మనుషుల కొరకు చర్మంపై ఇరిగులను కలిగిస్తుంది</td>
+                    </tr>
+                    <tr>
+                        <td>పూచం కాపడం</td>
+                        <td>మాంనొజెబ్</td>
+                        <td>టమాటాలు, ఆల్</td>
+                        <td>పూచం వ్యాధులు నివారించేందుకు సహాయపడుతుంది</td>
+                        <td>మట్టిలో విషపూరితంగా నిల్వ ఉంటుంది</td>
+                        <td>మీన్లు మరియు జలజీవులకు విషపూరితమైనది</td>
+                    </tr>
+                    <tr>
+                        <td>పురుగుల నాశకం</td>
+                        <td>డయజినాన్</td>
+                        <td>ఫలాలు, కూరగాయలు</td>
+                        <td>ఆఫిడ్స్ మరియు మరొక పురుగులను నియంత్రిస్తుంది</td>
+                        <td>నీటి మూలాలను కలుషితం చేస్తుంది</td>
+                        <td>పక్షులు మరియు జలజీవులకు హానికరం</td>
+                    </tr>
+                    <tr>
+                        <td>పచ్చిపూల నాశకం</td>
+                        <td>పారాక్వాట్</td>
+                        <td>చక్కెర చెట్టు, కూరగాయలు</td>
+                        <td>తీవ్రంగా మొక్కలపై పడిన ఆకులను నాశనం చేస్తుంది</td>
+                        <td>మట్టి హానికరం</td>
+                        <td>మనుషులకు శ్వాస సంబంధిత సమస్యలు</td>
+                    </tr>
+                    <tr>
+                        <td>పురుగుల నాశకం</td>
+                        <td>ఏసిఫేట్</td>
+                        <td>ఆలంకారిక మొక్కలు</td>
+                        <td>పలుకుబడి మరియు ఆఫిడ్స్ నివారించడంలో సహాయపడుతుంది</td>
+                        <td>నీటి కాలుష్యాన్ని కలిగి ఉంటుంది</td>
+                        <td>ఉమ్మడి జంతువులకు హానికరం</td>
+                    </tr>
+                    <tr>
+                        <td>పూచం కాపడం</td>
+                        <td>కాపర్ ఆక్సీక్లొరైడ్</td>
+                        <td>కూరగాయలు, పండ్లు</td>
+                        <td>పూచం పెరిగేన్ని నియంత్రించేందుకు సహాయపడుతుంది</td>
+                        <td>మట్టిలో నిల్వగా ఉంటుంది</td>
+                        <td>జలజీవులకు హానికరం</td>
+                    </tr>
+                    <tr>
+                        <td>పురుగుల నాశకం</td>
+                        <td>మలాథియాన్</td>
+                        <td>పండ్లు, కూరగాయలు</td>
+                        <td>మశాలలను నియంత్రిస్తుంది</td>
+                        <td>నీటి లోపల కాలుష్యాన్ని కలిగిస్తుంది</td>
+                        <td>మీనులకు హానికరం</td>
+                    </tr>
+                    <tr>
+                        <td>పచ్చిపూల నాశకం</td>
+                        <td>అట్రజిన్</td>
+                        <td>మా, శోర్గం</td>
+                        <td>బ్రాడ్లీఫ్ పుల్లను నియంత్రించడంలో సహాయపడుతుంది</td>
+                        <td>మట్టిలో చేరి నీటి కాలుష్యాన్ని కలగిస్తుంది</td>
+                        <td>పారదర్శకం పోషణ వ్యవస్థను ఉంచుతుంది</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Punjabi Section -->
+        <div id="section-pa" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ਕੀਟ ਨਾਸਕ</th>
+                        <th>ਆਮ ਨਾਮ</th>
+                        <th>ਲਕਸ਼ੀਤ ਫਸਲਾਂ</th>
+                        <th>ਫਾਇਦੇ</th>
+                        <th>ਪਰੀਆਵਰਨੀ ਪ੍ਰਭਾਵ</th>
+                        <th>ਜੀਵਜੰਤੂਆਂ 'ਤੇ ਪ੍ਰਭਾਵ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pesticide Data in Punjabi -->
+                    <tr>
+                        <td>ਕੀਟ ਨਾਸਕ</td>
+                        <td>ਕਲੋਰਪੀਰੀਫੋਸ</td>
+                        <td>ਮੱਕੀ, ਰੋਈ</td>
+                        <td>ਹੰਸਲੀਆਂ ਅਤੇ ਲਾਰਵਾਂ ਦਾ ਨਿਯੰਤਰਣ ਕਰਦਾ ਹੈ</td>
+                        <td>ਮਿੱਟੀ ਅਤੇ ਪਾਣੀ ਨੂੰ ਪ੍ਰਦੂਸ਼ਿਤ ਕਰਦਾ ਹੈ</td>
+                        <td>ਪੰਛੀਆਂ ਅਤੇ ਜਲਜੀਵਾਂ ਲਈ ਵਿਸ਼ੇਸ਼ ਹੈ</td>
+                    </tr>
+                    <tr>
+                        <td>ਘਾਹ ਨਾਸਕ</td>
+                        <td>ਗਲਾਈਫੋਸੇਟ</td>
+                        <td>ਸੋਯਾਬੀਨ, ਮੱਕੀ</td>
+                        <td>ਘਾਹਾਂ ਨੂੰ ਬਿਨਾ ਕਿਛੇ ਮਾਰਦਾ ਹੈ</td>
+                        <td>ਮਿੱਟੀ ਦੇ ਪਤਨ ਦਾ ਕਾਰਨ ਬਣਦਾ ਹੈ</td>
+                        <td>ਮਨੁੱਖਾਂ ਲਈ ਸੰਭਾਵਿਤ ਕੈਂਸਰ ਕਾਰਕ</td>
+                    </tr>
+                    <tr>
+                        <td>ਫੂਪਣੀ ਨਾਸਕ</td>
+                        <td>ਕੈਪਟਨ</td>
+                        <td>ਸੇਬ, ਸਟਰਾਬੇਰੀਜ਼</td>
+                        <td>ਫੂਪਣੀ ਦੀ ਵਾਧ ਨੂੰ ਰੋਕਦਾ ਹੈ</td>
+                        <td>ਜਲਗ੍ਰਹਿ ਵਿੱਚ ਲੀਚ ਹੋ ਜਾ ਸਕਦਾ ਹੈ</td>
+                        <td>ਮੱਛੀਆਂ ਅਤੇ ਅੰਬੀਬੀਅਨਜ਼ ਲਈ ਹਾਨਿਕਾਰਕ</td>
+                    </tr>
+                    <tr>
+                        <td>ਕੀਟ ਨਾਸਕ</td>
+                        <td>ਇਮਿਡਾਕਲੋਪਿਰਿਡ</td>
+                        <td>ਚਾਵਲ, ਸਬਜ਼ੀਆਂ</td>
+                        <td>ਆਫਿਡ ਅਤੇ ਕੀਟਾਂ ਦਾ ਨਿਯੰਤਰਣ ਕਰਦਾ ਹੈ</td>
+                        <td>ਜਲ ਸ੍ਰੋਤਾਂ ਨੂੰ ਪ੍ਰਦੂਸ਼ਿਤ ਕਰਨ ਦਾ ਖ਼ਤਰਾ</td>
+                        <td>ਮੱਛੀਆਂ ਅਤੇ ਪੰਛੀਆਂ ਲਈ ਖਤਰਨਾਕ</td>
+                    </tr>
+                    <tr>
+                        <td>ਘਾਹ ਨਾਸਕ</td>
+                        <td>2,4-ਡੀ</td>
+                        <td>ਗਹੂੰ, ਚਾਵਲ</td>
+                        <td>ਵੱਡੀਆਂ ਪੱਤੀਆਂ ਵਾਲੀਆਂ ਘਾਹਾਂ ਨੂੰ ਮਾਰਦਾ ਹੈ</td>
+                        <td>ਪਾਣੀ ਦੇ ਪ੍ਰਦੂਸ਼ਣ ਨੂੰ ਉਤਪੰਨ ਕਰਦਾ ਹੈ</td>
+                        <td>ਮਨੁੱਖਾਂ ਲਈ ਚਮੜੀ 'ਤੇ ਰਗੜ ਰਾਹੀਂ ਇਰਿਟੇਸ਼ਨ</td>
+                    </tr>
+                    <tr>
+                        <td>ਫੂਪਣੀ ਨਾਸਕ</td>
+                        <td>ਮੈਂਕੋਜ਼ੇਬ</td>
+                        <td>ਟਮਾਟਰ, ਆਲੂ</td>
+                        <td>ਫੂਪਣੀ ਬਿਮਾਰੀਆਂ ਨੂੰ ਰੋਕਦਾ ਹੈ</td>
+                        <td>ਮਿੱਟੀ ਵਿੱਚ ਜੈਵਿਕ ਸੰਚੀਤਤਾ</td>
+                        <td>ਮੱਛੀਆਂ ਅਤੇ ਅੰਬੀਬੀਅਨਜ਼ ਲਈ ਜਹਿਰੀਲਾ</td>
+                    </tr>
+                    <tr>
+                        <td>ਕੀਟ ਨਾਸਕ</td>
+                        <td>ਡਾਈਜ਼ਿਨੋਨ</td>
+                        <td>ਫਲ ਦਰੱਖਤ, ਸਬਜ਼ੀਆਂ</td>
+                        <td>ਆਫਿਡਾਂ ਦਾ ਨਿਯੰਤਰਣ ਕਰਦਾ ਹੈ</td>
+                        <td>ਜਲ ਗ੍ਰਾਊਂਡਵਾਟਰ ਦਾ ਪ੍ਰਦੂਸ਼ਣ</td>
+                        <td>ਪੰਛੀਆਂ ਅਤੇ ਜਲਜੀਵਾਂ ਲਈ ਹਾਨਿਕਾਰਕ</td>
+                    </tr>
+                    <tr>
+                        <td>ਘਾਹ ਨਾਸਕ</td>
+                        <td>ਪੈਰਾ ਕ੍ਵਾਟ</td>
+                        <td>ਚੀਨੀ ਕਨਕੜੀ, ਸਬਜ਼ੀਆਂ</td>
+                        <td>ਤਾਕਤਵਰ ਘਾਹ ਮਾਰਨ ਵਾਲਾ</td>
+                        <td>ਮਿੱਟੀ ਲਈ ਬਹੁਤ ਵਿਸ਼ੇਸ਼</td>
+                        <td>ਮਨੁੱਖਾਂ ਲਈ ਸ਼ਵਾਸ ਸੰਬੰਧੀ ਮੁਸ਼ਕਲਾਂ</td>
+                    </tr>
+                    <tr>
+                        <td>ਕੀਟ ਨਾਸਕ</td>
+                        <td>ਏਸੀਫੇਟ</td>
+                        <td>ਆਲੰਕਾਰਿਕ ਪੌਦੇ</td>
+                        <td>ਮੀਟ ਅਤੇ ਆਫਿਡਾਂ ਦਾ ਨਿਯੰਤਰਣ ਕਰਦਾ ਹੈ</td>
+                        <td>ਜਲ ਗ੍ਰਾਊਂਡਵਾਟਰ ਨੂੰ ਪ੍ਰਦੂਸ਼ਿਤ ਕਰਦਾ ਹੈ</td>
+                        <td>ਪਸ਼ੂਆਂ ਲਈ ਹਾਨਿਕਾਰਕ</td>
+                    </tr>
+                    <tr>
+                        <td>ਫੂਪਣੀ ਨਾਸਕ</td>
+                        <td>ਕਾਪਰ ਆਕਸੀਕਲੋਰਾਈਡ</td>
+                        <td>ਸਬਜ਼ੀਆਂ, ਫਲ</td>
+                        <td>ਫੂਪਣੀ ਉਤਪੰਨ ਨੂੰ ਰੋਕਦਾ ਹੈ</td>
+                        <td>ਮਿੱਟੀ ਵਿੱਚ ਜੈਵਿਕ ਤੌਰ 'ਤੇ ਜਮਦਾ ਹੈ</td>
+                        <td>ਜਲਜੀਵਾਂ ਲਈ ਹਾਨਿਕਾਰਕ</td>
+                    </tr>
+                    <tr>
+                        <td>ਕੀਟ ਨਾਸਕ</td>
+                        <td>ਮਾਲਾਥੀਓਨ</td>
+                        <td>ਫਲ, ਸਬਜ਼ੀਆਂ</td>
+                        <td>ਮਾਸਕਿਟੋਆਂ ਦਾ ਨਿਯੰਤਰਣ ਕਰਦਾ ਹੈ</td>
+                        <td>ਮਿੱਟੀ ਨੂੰ ਪ੍ਰਦੂਸ਼ਿਤ ਕਰਦਾ ਹੈ</td>
+                        <td>ਮੱਛੀਆਂ ਲਈ ਜਹਿਰੀਲਾ</td>
+                    </tr>
+                    <tr>
+                        <td>ਘਾਹ ਨਾਸਕ</td>
+                        <td>ਐਟ੍ਰੇਜ਼ਿਨ</td>
+                        <td>ਮੱਕੀ, ਸਰਗੋਮ</td>
+                        <td>ਵੱਧੀਆਂ ਘਾਹਾਂ ਦਾ ਨਿਯੰਤਰਣ ਕਰਦਾ ਹੈ</td>
+                        <td>ਮਿੱਟੀ ਵਿੱਚ ਲੀਚ ਹੋ ਜਾਂਦਾ ਹੈ</td>
+                        <td>ਅੰਬੀਬੀਅਨ ਹੋਰਮੋਨ ਪ੍ਰਣਾਲੀ ਨੂੰ ਪ੍ਰਭਾਵਿਤ ਕਰਦਾ ਹੈ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Marathi Section -->
+        <div id="section-mr" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th> कीटकनाशक </th>
+                        <th> सामान्य नाव </th>
+                        <th> लक्ष्य पिक(े) </th>
+                        <th> फायदे </th>
+                        <th> पर्यावरणीय प्रभाव </th>
+                        <th> सजीव प्राण्यांवरील प्रभाव </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pesticide Data in Marathi -->
+                    <tr>
+                        <td> कीटकनाशक </td>
+                        <td> क्लोरपायरीफोस </td>
+                        <td> मका, तंबाखू </td>
+                        <td> बीटल्स आणि अळ्या यांचा नियंत्रण करतो </td>
+                        <td> माती आणि पाणी प्रदूषित करते </td>
+                        <td> पक्षी आणि जलजीवांनसाठी विषारी </td>
+                    </tr>
+                    <tr>
+                        <td> गवत नाशक </td>
+                        <td> ग्लायफोसेट </td>
+                        <td> सोयाबीन, मका </td>
+                        <td> प्रभावीपणे गवत मारतो </td>
+                        <td> मातीचा विघटन करणारा </td>
+                        <td> मानवांसाठी संभाव्य कॅन्सरकारक </td>
+                    </tr>
+                    <tr>
+                        <td> बुरशी नाशक </td>
+                        <td> कॅप्टन </td>
+                        <td> सफरचंद, स्ट्रॉबेरी </td>
+                        <td> बुरशीची वाढ थांबवते </td>
+                        <td> भूजलात रिसाव होतो </td>
+                        <td> मासे आणि उभयचर प्राण्यांसाठी हानिकारक </td>
+                    </tr>
+                    <tr>
+                        <td> कीटकनाशक </td>
+                        <td> इमिडाक्लोप्रिड </td>
+                        <td> तांदूळ, भाजीपाला </td>
+                        <td> आफिड्स आणि बीटल्सचे नियंत्रण </td>
+                        <td> जलस्रोतांना प्रदूषित करण्याचा धोका </td>
+                        <td> मधमाश्या आणि पक्ष्यांसाठी धोकादायक </td>
+                    </tr>
+                    <tr>
+                        <td> गवत नाशक </td>
+                        <td> 2,4-डी </td>
+                        <td> गहू, तांदूळ </td>
+                        <td> रुंद पानांची गवतं काढते </td>
+                        <td> पाणी प्रदूषण होते </td>
+                        <td> मानवांसाठी त्वचा जळजळ </td>
+                    </tr>
+                    <tr>
+                        <td> बुरशी नाशक </td>
+                        <td> मॅन्कोझेब </td>
+                        <td> टोमॅटो, बटाटा </td>
+                        <td> बुरशीच्या रोगांना प्रतिबंधित करतो </td>
+                        <td> मातीतील जैविक संचय </td>
+                        <td> मासे आणि उभयचर प्राण्यांसाठी विषारी </td>
+                    </tr>
+                    <tr>
+                        <td> कीटकनाशक </td>
+                        <td> डायझिनॉन </td>
+                        <td> फळाचे झाडे, भाजीपाला </td>
+                        <td> कीटक जसे की आफिड्स नियंत्रित करतो </td>
+                        <td> भूजल प्रदूषित करते </td>
+                        <td> पक्षी आणि जलजीवांसाठी हानिकारक </td>
+                    </tr>
+                    <tr>
+                        <td> गवत नाशक </td>
+                        <td> पॅराक्वाट </td>
+                        <td> साखरकांदी, भाजीपाला </td>
+                        <td> प्रभावी गवत नाशक </td>
+                        <td> मातीला अत्यंत विषारी </td>
+                        <td> मानवांसाठी श्वसनाच्या समस्या </td>
+                    </tr>
+                    <tr>
+                        <td> कीटकनाशक </td>
+                        <td> एसीफेट </td>
+                        <td> शोभेच्या वनस्पती </td>
+                        <td> माइट्स आणि आफिड्सचा नियंत्रण </td>
+                        <td> भूजल प्रदूषित करते </td>
+                        <td> प्राणी, विशेषतः स्तनधारी प्राण्यांसाठी हानिकारक </td>
+                    </tr>
+                    <tr>
+                        <td> बुरशी नाशक </td>
+                        <td> कॉपर ऑक्सीक्लोराईड </td>
+                        <td> भाजीपाला, फळे </td>
+                        <td> बुरशीच्या वाढीस प्रतिबंधित करतो </td>
+                        <td> मातीमध्ये संचित होतो </td>
+                        <td> जलजीवांसाठी हानिकारक </td>
+                    </tr>
+                    <tr>
+                        <td> कीटकनाशक </td>
+                        <td> मालाथायन </td>
+                        <td> फळे, भाजीपाला </td>
+                        <td> मच्छरांचा नियंत्रण करतो </td>
+                        <td> मातीला प्रदूषित करतो </td>
+                        <td> मासे साठी विषारी </td>
+                    </tr>
+                    <tr>
+                        <td> गवत नाशक </td>
+                        <td> अट्राझिन </td>
+                        <td> मका, सोरघम </td>
+                        <td> वार्षिक गवतांचा नियंत्रण करतो </td>
+                        <td> भूजलात रिसाव होतो </td>
+                        <td> उभयचर प्राण्यांच्या हार्मोनल प्रणालीला हानीकारक </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Urdu Section -->
+        <div id="section-ur" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th> کیڑے مار دوا </th>
+                        <th> عام نام </th>
+                        <th> ہدف فصل(یں) </th>
+                        <th> فوائد </th>
+                        <th> ماحولیاتی اثرات </th>
+                        <th> جانداروں پر اثرات </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pesticide Data in Urdu -->
+                    <tr>
+                        <td> کیڑے مار دوا </td>
+                        <td> کلورپیریفوس </td>
+                        <td> مکئی، کپاس </td>
+                        <td> بیٹل اور کیٹرپلر جیسے کیڑوں کا کنٹرول </td>
+                        <td> مٹی اور پانی کو آلودہ کرتا ہے </td>
+                        <td> پرندوں اور آبی حیات کے لیے زہریلا </td>
+                    </tr>
+                    <tr>
+                        <td> جڑی بوٹی مار دوا </td>
+                        <td> گلیفوسٹ </td>
+                        <td> سویابین، مکئی </td>
+                        <td> مؤثر طریقے سے جڑی بوٹیاں مارتی ہے </td>
+                        <td> مٹی کے زوال کا باعث بنتی ہے </td>
+                        <td> انسانوں کے لیے ممکنہ طور پر کینسر پیدا کرنے والی </td>
+                    </tr>
+                    <tr>
+                        <td> پھپھوندی مار دوا </td>
+                        <td> کپٹن </td>
+                        <td> سیب، اسٹرابیری </td>
+                        <td> پھپھوندی کی افزائش کو روکتا ہے </td>
+                        <td> زیر زمین پانی میں گھل جاتی ہے </td>
+                        <td> مچھلیوں اور رینگنے والے جانوروں کے لیے نقصان دہ </td>
+                    </tr>
+                    <tr>
+                        <td> کیڑے مار دوا </td>
+                        <td> امیڈاکلوپرائیڈ </td>
+                        <td> چاول، سبزیاں </td>
+                        <td> افڈس اور بیٹل کا کنٹرول </td>
+                        <td> آبی ذخائر کے لیے آلودگی کا خطرہ </td>
+                        <td> مکھیوں اور پرندوں کے لیے خطرناک </td>
+                    </tr>
+                    <tr>
+                        <td> جڑی بوٹی مار دوا </td>
+                        <td> 2,4-D </td>
+                        <td> گندم، چاول </td>
+                        <td> وسیع پتے والی جڑی بوٹیوں کو نکالنا </td>
+                        <td> پانی کی آلودگی پیدا کرتی ہے </td>
+                        <td> انسانوں کے لیے جلد میں جلن </td>
+                    </tr>
+                    <tr>
+                        <td> پھپھوندی مار دوا </td>
+                        <td> مینکوزیب </td>
+                        <td> ٹماٹر، آلو </td>
+                        <td> پھپھوندی کی بیماریوں سے بچاؤ </td>
+                        <td> مٹی میں حیاتیاتی ذخیرہ </td>
+                        <td> مچھلیوں اور رینگنے والے جانوروں کے لیے زہریلا </td>
+                    </tr>
+                    <tr>
+                        <td> کیڑے مار دوا </td>
+                        <td> ڈایزینون </td>
+                        <td> پھلوں کے درخت، سبزیاں </td>
+                        <td> افڈس جیسے کیڑوں کا کنٹرول </td>
+                        <td> زیر زمین پانی کو آلودہ کرتا ہے </td>
+                        <td> پرندوں اور آبی حیات کے لیے خطرناک </td>
+                    </tr>
+                    <tr>
+                        <td> جڑی بوٹی مار دوا </td>
+                        <td> پیرا کویٹ </td>
+                        <td> گنے، سبزیاں </td>
+                        <td> مؤثر جڑی بوٹی مار دوا </td>
+                        <td> مٹی کے لیے انتہائی زہریلا </td>
+                        <td> انسانوں میں سانس لینے کی تکلیف </td>
+                    </tr>
+                    <tr>
+                        <td> کیڑے مار دوا </td>
+                        <td> ایسفیت </td>
+                        <td> سجاوٹی پودے </td>
+                        <td> مائیٹس اور افڈس کا کنٹرول </td>
+                        <td> زیر زمین پانی کو آلودہ کرتا ہے </td>
+                        <td> ممالیہ جانوروں کے لیے نقصان دہ </td>
+                    </tr>
+                    <tr>
+                        <td> پھپھوندی مار دوا </td>
+                        <td> کاپر آکسی کلورائیڈ </td>
+                        <td> سبزیاں، پھل </td>
+                        <td> پھپھوندی کی افزائش کو روکتا ہے </td>
+                        <td> مٹی میں جمع ہوتا ہے </td>
+                        <td> آبی حیات کے لیے زہریلا </td>
+                    </tr>
+                    <tr>
+                        <td> کیڑے مار دوا </td>
+                        <td> مالاتھایان </td>
+                        <td> پھل، سبزیاں </td>
+                        <td> مچھروں کا کنٹرول </td>
+                        <td> مٹی کو آلودہ کرتا ہے </td>
+                        <td> مچھلیوں کے لیے زہریلا </td>
+                    </tr>
+                    <tr>
+                        <td> جڑی بوٹی مار دوا </td>
+                        <td> اٹرازین </td>
+                        <td> مکئی، سورگم </td>
+                        <td> سالانہ گھاس کو کنٹرول کرتا ہے </td>
+                        <td> زیر زمین پانی میں رساؤ ہوتا ہے </td>
+                        <td> رینگنے والے جانوروں کے ہارمون سسٹم کو متاثر کرتا ہے </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
 
-    <footer id="footer">
-        <p>CHE 110 | Designed for easy pesticide information access | © 2024</p>
+    <footer>
+        <div>
+            <button onclick="goToData()" class="animated-button">More Data</button>
+        </div>
+        <p>CHE 110 | Pesticide Database | &copy; 2024</p>
+        <div class="footer-right">
+            <label for="language-select">Language : </label>
+            <select id="language-select" onchange="changeLanguage()" class="animated-dropdown">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="pa">Punjabi</option>
+                <option value="mr">Marathi</option>
+                <option value="ur">Urdu</option>
+            </select>
+        </div>
     </footer>
 
     <script src="script.js"></script>
