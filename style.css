@@ -20,7 +20,7 @@ body.dark-mode {
 header {
     position: sticky;
     top: 0;
-    background-color: #4CAF50;
+    background-color: #6f8aff;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -56,7 +56,6 @@ header.dark-mode {
         opacity: 0;
         transform: translateX(-100%);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
@@ -83,11 +82,11 @@ header.dark-mode {
 
 .header-right input:focus {
     background-color: #f1f1f1;
-    border-color: #4CAF50;
+    border-color: #6f8aff;
     transform: scale(1.05);
 }
 
-.header-right button {
+.header-right button, select {
     background: none;
     border: none;
     cursor: pointer;
@@ -96,12 +95,21 @@ header.dark-mode {
     transition: color 0.3s ease;
 }
 
-.header-right button:hover {
-    color: #4CAF50;
+.header-right button:hover, select:hover {
+    color: #6f8aff;
 }
 
 #theme-toggle:hover {
     opacity: 0.8;
+}
+
+/* Language Sections */
+.language-section {
+    display: none;
+}
+
+.language-section.active {
+    display: block;
 }
 
 /* Table Styling */
@@ -121,12 +129,11 @@ body.dark-mode table {
 }
 
 table thead {
-    background-color: #4CAF50;
+    background-color: #6f8aff;
     color: #fff;
 }
 
-table th,
-table td {
+table th, table td {
     padding: 15px;
     text-align: left;
     font-size: 0.95em;
@@ -180,31 +187,117 @@ body.dark-mode footer {
         opacity: 0;
         transform: translateY(10px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Button Styling */
-.btn {
-    padding: 12px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+/* Footer styling */
+footer {
+    padding: 15px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.btn:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.btn:focus {
+/* Animated dropdown styling */
+.animated-dropdown {
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     outline: none;
-    box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Animation effect */
+.animated-dropdown:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+.animated-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.animated-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+
+.animated-button:active {
+    transform: scale(0.98); /* Slightly smaller on click */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Softer shadow on click */
+}
+
+/* Animated dropdown styling */
+.animated-dropdown {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-dropdown:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Language Select dropdown styling */
+.animated-dropdown {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* On hover, scale up the dropdown and add shadow */
+.animated-dropdown:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0; /* Slight background change on hover */
+}
+
+/* On focus, add a more intense shadow and subtle background color */
+.animated-dropdown:focus {
+    background-color: #e8e8e8;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    border-color: #4CAF50; /* Green border on focus */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* When the language is selected, it appears with a clean and subtle shadow */
+.animated-dropdown:active {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    background-color: #e8e8e8;
+}
+
