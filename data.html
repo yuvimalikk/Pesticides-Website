@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Database</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1 id="page-title">PESTICIDE DATABASE</h1>
+            </div>
+            <div class="header-right">
+                <input type="text" id="search" placeholder="Search" onkeyup="filterTable()">
+                <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <!-- English Section -->
+        <div id="section-en" class="language-section active">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pesticides</th>
+                        <th>Common Name</th>
+                        <th>India</th>
+                        <th>USA</th>
+                        <th>China</th>
+                        <th>Japan</th>
+                        <th>Russia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Chlorpyrifos</td>
+                        <td class="banned">Banned</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="banned">Banned</td>
+                        <td class="not-banned">Banned</td>
+                    </tr>
+                    <tr>
+                        <td>Herbicide</td>
+                        <td>Glyphosate</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">Banned</td>
+                    </tr>
+                    <tr>
+                        <td>Fungicide</td>
+                        <td>Captan</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Imidacloprid</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>Herbicide</td>
+                        <td>2,4-D</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>Fungicide</td>
+                        <td>Mancozeb</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Diazinon</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">Banned</td>
+                    </tr>
+                    <tr>
+                        <td>Herbicide</td>
+                        <td>Paraquat</td>
+                        <td class="banned">Banned</td>
+                        <td class="banned">Banned</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">Banned</td>
+                    </tr>
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Acephate</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>Fungicide</td>
+                        <td>Copper Oxychloride</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Malathion</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>Herbicide</td>
+                        <td>Atrazine</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>Fungicide</td>
+                        <td>Thiram</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>Insecticide</td>
+                        <td>Carbaryl</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>Herbicide</td>
+                        <td>Dicamba</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Hindi Section -->
+        <div id="section-hi" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>कीटनाशक</th>
+                        <th>सामान्य नाम</th>
+                        <th>भारत</th>
+                        <th>अमेरिका</th>
+                        <th>चीन</th>
+                        <th>जापान</th>
+                        <th>रूस</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>क्लोरपाइरीफोस</td>
+                        <td class="banned">प्रतिबंधित</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="banned">प्रतिबंधित</td>
+                        <td class="not-banned">प्रतिबंधित</td>
+                    </tr>
+                    <tr>
+                        <td>शाकनाशी</td>
+                        <td>ग्लाइफोसेट</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">प्रतिबंधित</td>
+                    </tr>
+                    <tr>
+                        <td>फफूंदनाशी</td>
+                        <td>कैप्टन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>इमिडाक्लोप्रिड</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>शाकनाशी</td>
+                        <td>2,4-डी</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>फफूंदनाशी</td>
+                        <td>मैनकोजेब</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>डायाजिनोन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">प्रतिबंधित</td>
+                    </tr>
+                    <tr>
+                        <td>शाकनाशी</td>
+                        <td>पैराक्वाट</td>
+                        <td class="banned">प्रतिबंधित</td>
+                        <td class="banned">प्रतिबंधित</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">प्रतिबंधित</td>
+                    </tr>
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>एसिफेट</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>फफूंदनाशी</td>
+                        <td>कॉपर ऑक्सीक्लोराइड</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>मेलाथियान</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>शाकनाशी</td>
+                        <td>एट्राज़ीन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>फफूंदनाशी</td>
+                        <td>थिराम</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटनाशक</td>
+                        <td>कार्बारिल</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>शाकनाशी</td>
+                        <td>डिकम्बा</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Tamil Section -->
+        <div id="section-ta" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>பூச்சிக்கொல்லி</th>
+                        <th>பொதுவான பெயர்</th>
+                        <th>இந்தியா</th>
+                        <th>அமெரிக்கா</th>
+                        <th>சீனா</th>
+                        <th>ஜப்பான்</th>
+                        <th>ரஷ்யா</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>பூச்சிக்கொல்லி</td>
+                        <td>குளோர்பைரிஃபாஸ்</td>
+                        <td class="banned">தடைசெய்யப்பட்டது</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="banned">தடைசெய்யப்பட்டது</td>
+                        <td class="not-banned">தடைசெய்யப்பட்டது</td>
+                    </tr>
+                    <tr>
+                        <td>களைகட்டுபடுத்தி</td>
+                        <td>குளைஃபோசெட்</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">தடைசெய்யப்பட்டது</td>
+                    </tr>
+                    <tr>
+                        <td>பூஞ்சைக்கொல்லி</td>
+                        <td>காப்டன்</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>பூச்சிக்கொல்லி</td>
+                        <td>இமிடாக்ளோபிரிட்</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>களைகட்டுபடுத்தி</td>
+                        <td>2,4-டி</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>பூஞ்சைக்கொல்லி</td>
+                        <td>மாங்கோசேப்</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>பூச்சிக்கொல்லி</td>
+                        <td>டைஅசினோன்</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">தடைசெய்யப்பட்டது</td>
+                    </tr>
+                    <tr>
+                        <td>களைகட்டுபடுத்தி</td>
+                        <td>பாராக்வாட்</td>
+                        <td class="banned">தடைசெய்யப்பட்டது</td>
+                        <td class="banned">தடைசெய்யப்பட்டது</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">தடைசெய்யப்பட்டது</td>
+                    </tr>
+                    <tr>
+                        <td>பூச்சிக்கொல்லி</td>
+                        <td>அசெபேட்</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>பூஞ்சைக்கொல்லி</td>
+                        <td>காப்பர் ஆக்ஸிகுளோரைடு</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>பூச்சிக்கொல்லி</td>
+                        <td>மாலத்தியான்</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>களைகட்டுபடுத்தி</td>
+                        <td>அட்ராசின்</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>பூஞ்சைக்கொல்லி</td>
+                        <td>தீரம்</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>பூச்சிக்கொல்லி</td>
+                        <td>கார்பாரில்</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>களைகட்டுபடுத்தி</td>
+                        <td>டிகாம்பா</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Telugu Section -->
+        <div id="section-te" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>కీటకనాశిని</th>
+                        <th>సాధారణ పేరు</th>
+                        <th>భారతదేశం</th>
+                        <th>అమెరికా</th>
+                        <th>చైనా</th>
+                        <th>జపాన్</th>
+                        <th>రష్యా</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>కీటకనాశిని</td>
+                        <td>క్లోర్పైరిఫాస్</td>
+                        <td class="banned">నిషేధించబడింది</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="banned">నిషేధించబడింది</td>
+                        <td class="not-banned">నిషేధించబడింది</td>
+                    </tr>
+                    <tr>
+                        <td>కలుపు నివారణ</td>
+                        <td>గ్లైఫోసేట్</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">నిషేధించబడింది</td>
+                    </tr>
+                    <tr>
+                        <td>ఫంగిసైడ్</td>
+                        <td>కాప్టాన్</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>కీటకనాశిని</td>
+                        <td>ఇమిడాక్లోప్రిడ్</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>కలుపు నివారణ</td>
+                        <td>2,4-డి</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ఫంగిసైడ్</td>
+                        <td>మాంకోజెబ్</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>కీటకనాశిని</td>
+                        <td>డయాజినోన్</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">నిషేధించబడింది</td>
+                    </tr>
+                    <tr>
+                        <td>కలుపు నివారణ</td>
+                        <td>పారాక్వాట్</td>
+                        <td class="banned">నిషేధించబడింది</td>
+                        <td class="banned">నిషేధించబడింది</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">నిషేధించబడింది</td>
+                    </tr>
+                    <tr>
+                        <td>కీటకనాశిని</td>
+                        <td>ఎసెఫేట్</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ఫంగిసైడ్</td>
+                        <td>కాపర్ ఆక్సిక్లోరైడ్</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>కీటకనాశిని</td>
+                        <td>మాలతియన్</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>కలుపు నివారణ</td>
+                        <td>అట్రాజైన్</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ఫంగిసైడ్</td>
+                        <td>థిరామ్</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>కీటకనాశిని</td>
+                        <td>కార్బారిల్</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>కలుపు నివారణ</td>
+                        <td>డైకాంబా</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Punjabi Section -->
+        <div id="section-pa" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ਜਹਿਰ</th>
+                        <th>ਆਮ ਨਾਂ</th>
+                        <th>ਭਾਰਤ</th>
+                        <th>ਅਮਰੀਕਾ</th>
+                        <th>ਚੀਨ</th>
+                        <th>ਜਪਾਨ</th>
+                        <th>ਰੂਸ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ਕੀਟਨਾਸ਼ਕ</td>
+                        <td>ਕਲੋਰਪਾਇਰੀਫੋਸ</td>
+                        <td class="banned">ਪਾਬੰਦੀ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="banned">ਪਾਬੰਦੀ</td>
+                        <td class="not-banned">ਪਾਬੰਦੀ</td>
+                    </tr>
+                    <tr>
+                        <td>ਖਰਪਤਵਾਰ ਨਾਸ਼ਕ</td>
+                        <td>ਗਲਾਈਫੋਸੇਟ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">ਪਾਬੰਦੀ</td>
+                    </tr>
+                    <tr>
+                        <td>ਫੰਗਸ ਨਾਸ਼ਕ</td>
+                        <td>ਕੈਪਟਾਨ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ਕੀਟਨਾਸ਼ਕ</td>
+                        <td>ਇਮੀਡਾਕਲੋਪ੍ਰਿਡ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ਖਰਪਤਵਾਰ ਨਾਸ਼ਕ</td>
+                        <td>2,4-ਡੀ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ਫੰਗਸ ਨਾਸ਼ਕ</td>
+                        <td>ਮੈਂਕੋਜ਼ੇਬ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ਕੀਟਨਾਸ਼ਕ</td>
+                        <td>ਡਾਇਜ਼ਿਨੋਨ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">ਪਾਬੰਦੀ</td>
+                    </tr>
+                    <tr>
+                        <td>ਖਰਪਤਵਾਰ ਨਾਸ਼ਕ</td>
+                        <td>ਪੈਰਾਕੁਇਟ</td>
+                        <td class="banned">ਪਾਬੰਦੀ</td>
+                        <td class="banned">ਪਾਬੰਦੀ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">ਪਾਬੰਦੀ</td>
+                    </tr>
+                    <tr>
+                        <td>ਕੀਟਨਾਸ਼ਕ</td>
+                        <td>ਏਸੇਫੇਟ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ਫੰਗਸ ਨਾਸ਼ਕ</td>
+                        <td>ਤਾਂਬੇ ਦਾ ਆਕਸਿਕਲੋਰਾਈਡ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ਕੀਟਨਾਸ਼ਕ</td>
+                        <td>ਮੈਲਾਥੀਓਨ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ਖਰਪਤਵਾਰ ਨਾਸ਼ਕ</td>
+                        <td>ਐਟਰੇਜ਼ੀਨ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ਫੰਗਸ ਨਾਸ਼ਕ</td>
+                        <td>ਥਿਰਾਮ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ਕੀਟਨਾਸ਼ਕ</td>
+                        <td>ਕਾਰਬੇਰੀਲ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>ਖਰਪਤਵਾਰ ਨਾਸ਼ਕ</td>
+                        <td>ਡਾਈਕੈਂਬਾ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Marathi Section -->
+        <div id="section-mr" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>कीटकनाशके</th>
+                        <th>सामान्य नाव</th>
+                        <th>भारत</th>
+                        <th>अमेरिका</th>
+                        <th>चीन</th>
+                        <th>जपान</th>
+                        <th>रशिया</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>क्लोरपायरीफॉस</td>
+                        <td class="banned">बंद</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="banned">बंद</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>ग्लायफोसेट</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>कॅप्टन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>इमिडाक्लोप्रिड</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>2,4-डी</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>मँकोझेब</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>डायझिनॉन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>पॅराक्वॉट</td>
+                        <td class="banned">बंद</td>
+                        <td class="banned">बंद</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>एसफेट</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>कॉपर ऑक्सिक्लोराईड</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>मॅलॅथिऑन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>अट्राझीन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>थिरॅम</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>कार्बेरिल</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>डायकॅम्बा</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Marathi Section -->
+        <div id="section-mr" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>कीटकनाशके</th>
+                        <th>सामान्य नाव</th>
+                        <th>भारत</th>
+                        <th>अमेरिका</th>
+                        <th>चीन</th>
+                        <th>जपान</th>
+                        <th>रशिया</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>क्लोरपायरीफॉस</td>
+                        <td class="banned">बंद</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="banned">बंद</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>ग्लायफोसेट</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>कॅप्टन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>इमिडाक्लोप्रिड</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>2,4-डी</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>मँकोझेब</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>डायझिनॉन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>पॅराक्वॉट</td>
+                        <td class="banned">बंद</td>
+                        <td class="banned">बंद</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>एसफेट</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>कॉपर ऑक्सिक्लोराईड</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>मॅलॅथिऑन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>अट्राझीन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>थिरॅम</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>कार्बेरिल</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>डायकॅम्बा</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Marathi Section -->
+        <div id="section-mr" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>कीटकनाशके</th>
+                        <th>सामान्य नाव</th>
+                        <th>भारत</th>
+                        <th>अमेरिका</th>
+                        <th>चीन</th>
+                        <th>जपान</th>
+                        <th>रशिया</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>क्लोरपायरीफॉस</td>
+                        <td class="banned">बंद</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="banned">बंद</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>ग्लायफोसेट</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>कॅप्टन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>इमिडाक्लोप्रिड</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>2,4-डी</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>मँकोझेब</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>डायझिनॉन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>पॅराक्वॉट</td>
+                        <td class="banned">बंद</td>
+                        <td class="banned">बंद</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">बंद</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>एसफेट</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>कॉपर ऑक्सिक्लोराईड</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>मॅलॅथिऑन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>अट्राझीन</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>बुरशीनाशक</td>
+                        <td>थिरॅम</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>कीटकनाशक</td>
+                        <td>कार्बेरिल</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>तणनाशक</td>
+                        <td>डायकॅम्बा</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Urdu Section -->
+        <div id="section-ur" class="language-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>کیڑے مار دوا</th>
+                        <th>عام نام</th>
+                        <th>بھارت</th>
+                        <th>امریکہ</th>
+                        <th>چین</th>
+                        <th>جاپان</th>
+                        <th>روس</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>کیڑے مار دوا</td>
+                        <td>کلورپیریفوس</td>
+                        <td class="banned">ممنوعہ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="banned">ممنوعہ</td>
+                        <td class="not-banned">ممنوعہ</td>
+                    </tr>
+                    <tr>
+                        <td>جڑی بوٹی مار دوا</td>
+                        <td>گلیفوسیٹ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">ممنوعہ</td>
+                    </tr>
+                    <tr>
+                        <td>فنگس مار دوا</td>
+                        <td>کیپٹن</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>کیڑے مار دوا</td>
+                        <td>امیڈاکلوپریڈ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>جڑی بوٹی مار دوا</td>
+                        <td>2,4-D</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>فنگس مار دوا</td>
+                        <td>مینکوزیب</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>کیڑے مار دوا</td>
+                        <td>ڈایزنون</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">ممنوعہ</td>
+                    </tr>
+                    <tr>
+                        <td>جڑی بوٹی مار دوا</td>
+                        <td>پیراکوئٹ</td>
+                        <td class="banned">ممنوعہ</td>
+                        <td class="banned">ممنوعہ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">ممنوعہ</td>
+                    </tr>
+                    <tr>
+                        <td>کیڑے مار دوا</td>
+                        <td>ایسیفیٹ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>فنگس مار دوا</td>
+                        <td>کاپر آکسی کلورائیڈ</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>کیڑے مار دوا</td>
+                        <td>میلا تھین</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>جڑی بوٹی مار دوا</td>
+                        <td>ایٹریزین</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>فنگس مار دوا</td>
+                        <td>تھیرآم</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>کیڑے مار دوا</td>
+                        <td>کاربیریل</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                    <tr>
+                        <td>جڑی بوٹی مار دوا</td>
+                        <td>ڈیکامبا</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                        <td class="not-banned">―</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <button onclick="goToIndex()" class="animated-button">Back</button>
+        </div>
+        <p>CHE 110 | Pesticide Database | &copy; 2024</p>
+        <div class="footer-right">
+            <label for="language-select">Language : </label>
+            <select id="language-select" onchange="changeLanguage()" class="animated-dropdown">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="pa">Punjabi</option>
+                <option value="mr">Marathi</option>
+                <option value="ur">Urdu</option>
+            </select>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
