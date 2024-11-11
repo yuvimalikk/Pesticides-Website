@@ -61,3 +61,23 @@ function goToData() {
     window.location.href = "data.html";
 }
 
+function filterTable() {
+    const input = document.getElementById("search");
+    const filter = input.value.toLowerCase();
+    const table = document.querySelector("table tbody");
+    const rows = table.getElementsByTagName("tr");
+
+    for (let i = 0; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName("td");
+        let rowMatch = false;
+
+        for (let j = 0; j < cells.length; j++) {
+            if (cells[j].textContent.toLowerCase().includes(filter)) {
+                rowMatch = true;
+                break;
+            }
+        }
+
+        rows[i].style.display = rowMatch ? "" : "none";
+    }
+}
